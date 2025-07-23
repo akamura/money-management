@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!-- htmlのコード -->
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <title>家計簿</title>
+    </head>
+    <body>
+
+    <h1><span id="nowMonth"></span>月<span id="nowDate"></span>日（<span id="nowWeek"></span>）曜日</h1>
+
+    <div id="hourly" class="hourly">
+        <p>消費の時給換算(今日)</p>
+        <p>-<span id="hourly_wage">1000</span>円</p>
+        <p>消費の時給換算（今月）</p>
+        <p>-<span id="hourly_wage_month">1000</span>円</p>
+    </div>
+    <div id="now_expenditure_id">
+        <label for="now_expenditure">今の買い物の金額</label>
+        <input id="now_expenditure" value="0" type="number" min="0" step="1">
+        
+        <label for="type_of_expenditure">支出の種類</label>
+        <select id="type_of_expenditure">
+            <option value="投資">投資</option>
+            <option value="浪費">浪費</option>
+            <option value="日用品">日用品</option>
+            <option value="外食">外食</option>
+            <option value="出前">出前</option>
+            <option value="本">本</option>
+            <option value="教材">教材</option>
+            <option value="コンビニ">コンビニ</option>
+            <option value="食品">食品</option>
+            <option value="その他">その他</option>
+        </select>
+        <button id="send_expenditure">送信</button>
+    </div>
+    <div id="now_income_id">
+        <label for="now_income">今の収入の金額</label>
+        <input id="now_income" value="0" type="number" min="0" step="0">
+        <button id="send_income">送信</button>
+    </div>
+    <div id="totals">
+        <div id="total_today">
+            <h2>今日の出費</h2>
+            <p id="today_expense">100</p>
+        </div>
+        <div id="total_week">
+            <h2>今週の出費</h2>
+            <p id="week_expense" >760</p>
+        </div>
+        <div id="total_month">
+            <h2>今月の出費</h2>
+            <p id="month_expense">765</p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th id="month_display"><span id="table_month_span"></span>月</th>
+                <th>出費</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>投資</th>
+                <td id="investment">1000</td>
+            </tr>
+            <tr>
+                <th>浪費</th>
+                <td id="waste_expense">1000</td>
+            </tr>
+            <tr>
+                <th>日用品</th>
+                <td id="necessities">1000</td>
+            </tr>
+            <tr>
+                <th>外食</th>
+                <td id="eating_out">1000</td>
+            </tr>
+            <tr>
+                <th>出前</th>
+                <td id="delivery">1000</td>
+            </tr>
+            <tr>
+                <th>本</th>
+                <td id="book">1000</td>
+            </tr>
+            <tr>
+                <th>教材</th>
+                <td id="teaching_material">1000</td>
+            </tr>
+            <tr>
+                <th>コンビニ</th>
+                <td id="convenience">1000</td>
+            </tr>
+            <tr>
+                <th>食品</th>
+                <td id="food">1000</td>
+            </tr>
+            <tr>
+                <th>その他</th>
+                <td id="other">1000</td>
+            </tr>
+        </tbody>
+        <caption>収入と支出</caption>
+        
+    </table>
+    <div style="text-align: center;">
+        <canvas id="pieChart" width="500" height="300"></canvas>
+    </div>
+
+    <script src="index.js"></script>
+    </body>
+</html>
