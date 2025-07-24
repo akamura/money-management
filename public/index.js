@@ -1,4 +1,9 @@
 "use strict";
+//renderで動作するために追加
+const BASE_URL = location.hostname === "localhost"
+    ? "http://localhost:8001"
+    : "https://money-management-api-cb2j.onrender.com"
+
 
 // フロントエンドのコード
 
