@@ -5,11 +5,13 @@
 //モジュールの読み込みとインスタンス化
 const express = require("express");
 const bodyParser = require("body-parser");
-// const fetch = require("node-fetch");
+// const fetch = require("node-fetch"); 最新だと不要？一応コメントアウト
 const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
+
+
 
 const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxMcjUvOV6K1BKXyG69rAAq7wBl7G1jsD1_avfgonZ1IOQRoPxPF22tVTonjnjlUp4b6Q/exec";
 
@@ -61,9 +63,9 @@ app.get("/relay",async (req, res) => {
     }
 });
 
-app.listen(8000, () => {
-    console.log("サーバー稼働中：ポート8000");
-});
+// app.listen(8000, () => {
+//     console.log("サーバー稼働中：ポート8000");
+// });
 
 
 // const response = await fetch(url, {
@@ -79,7 +81,12 @@ app.listen(8000, () => {
 // res.send(text);
 
 
-app.listen(8001, () => {
-    console.log("サーバー稼働中：ポート8001");
-});
+// app.listen(8001, () => {
+//     console.log("サーバー稼働中：ポート8001");
+// });
 
+//環境変数を使用して、ポート番号を決める
+const PORT = process.env.PORT || 8001;
+app.listen(PORT,() => {
+    console.log(`サーバー稼働中：ポート${PORT}`);
+})
