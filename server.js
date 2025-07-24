@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzaaz9uJsfsgAigCXS1VP1HwG94UcN91lH__BfeTDzFZVfZaDDZazcqILohISqRkNOKJw/exec";
+const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxMcjUvOV6K1BKXyG69rAAq7wBl7G1jsD1_avfgonZ1IOQRoPxPF22tVTonjnjlUp4b6Q/exec";
 
 
 //情報を送る
