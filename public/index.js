@@ -97,7 +97,7 @@ document.getElementById("send_income").addEventListener("click" ,(e) => {
 });
 
 function send (data) {  //ポート8001にデータを送信する
-    return fetch("http://localhost:8001/", {
+    return fetch(`${BASE_URL}/`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -112,7 +112,7 @@ function send (data) {  //ポート8001にデータを送信する
 
 function receive () {//情報の受け取りと値の貼り付け
 
-    fetch("http://localhost:8000/relay")//開けたポートのurlを代入する
+    fetch(`${BASE_URL}/relay`)//開けたポートのurlを代入する
     .then(res => res.json())
     .then(data => {
         console.log("受け取りデータ：", data);
