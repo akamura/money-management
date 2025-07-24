@@ -68,3 +68,15 @@ td {
 
 /* } */
 
+canvas {
+    margin: 0 auto;
+    display: block;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+.red_moji {
+    color: red;
+}
