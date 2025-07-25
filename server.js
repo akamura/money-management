@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 
-const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxMcjUvOV6K1BKXyG69rAAq7wBl7G1jsD1_avfgonZ1IOQRoPxPF22tVTonjnjlUp4b6Q/exec";
+const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzrDSib9Z88BbHV5JUa3gzOIiMStR__UqZgmZFCyfxOqDHL_VBbgq1xO64QQOEdMiiSDg/exec";
 
 
 //情報を送る
